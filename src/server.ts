@@ -11,6 +11,9 @@ import retentionWorker, {
 } from './workers/retention.worker';
 import indexerWorker from './workers/indexer.worker';
 
+/**
+ * Boots MongoDB, queue workers (including retention), and the Express HTTP server.
+ */
 async function startServer() {
   try {
     // Validate required environment variables
